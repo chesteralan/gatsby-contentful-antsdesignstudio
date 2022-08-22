@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+require("dotenv").config();
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -14,14 +15,14 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "vTl602HKlZvlyYWxit32yJL6IjtliTU1pW33yT0uYXg",
-        spaceId: "sg7hkmf6gn11",
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESSTOKEN,
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACEID,
       },
     },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "TEST",
+        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID,
       },
     },
     {
