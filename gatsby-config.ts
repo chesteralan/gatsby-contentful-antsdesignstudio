@@ -4,7 +4,7 @@ require("dotenv").config();
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Ants Design Studio Marketing Site`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.antsdesignsstudio.com/`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin

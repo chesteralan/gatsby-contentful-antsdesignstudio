@@ -7,6 +7,8 @@ import Services from "../components/Services/Services"
 import Portfolio from "../components/Portfolio/Portfolio"
 import Footer from "../components/Footer/Footer"
 import TopBar from "../components/TopBar/TopBar"
+import FeaturedServices from "../components/FeaturedServices/FeaturedServices"
+import Testimonials from "../components/Testimonials/Testimonials"
 
 
 
@@ -16,8 +18,10 @@ const IndexPage = () => {
     <TopBar />
     <Header />
     <Hero />
+    <FeaturedServices />
     <About />
     <Services />
+    <Testimonials />
     <Portfolio />
     <Footer />
     </>
