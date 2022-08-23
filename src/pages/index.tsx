@@ -15,19 +15,20 @@ type Props = {
   data: any
 }
 
+
 const IndexPage = (props: Props) => {
 
   const { data } = props;
 
-  const topBarSection = data.topBarSection?.booleanValue || true;
-  const headerSection = data.headerSection?.booleanValue || true;
-  const heroSection = data.heroSection?.booleanValue || true;
-  const featuredServicesSection = data.featuredServicesSection?.booleanValue || true;
-  const aboutSection = data.aboutSection?.booleanValue || true;
-  const servicesSection = data.servicesSection?.booleanValue || true;
-  const testimonialsSection = data.testimonialsSection?.booleanValue || true;
-  const portfolioSection = data.portfolioSection?.booleanValue || true;
-  const footerSection = data.footerSection?.booleanValue || true;
+  const topBarSection = data?.topBarSection?.booleanValue || true;
+  const headerSection = data?.headerSection?.booleanValue || true;
+  const heroSection = data?.heroSection?.booleanValue || true;
+  const featuredServicesSection = data?.featuredServicesSection?.booleanValue || true;
+  const aboutSection = data?.aboutSection?.booleanValue || true;
+  const servicesSection = data?.servicesSection?.booleanValue || true;
+  const testimonialsSection = data?.testimonialsSection?.booleanValue || true;
+  const portfolioSection = data?.portfolioSection?.booleanValue || true;
+  const footerSection = data?.footerSection?.booleanValue || true;
 
   return (
     <>
