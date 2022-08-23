@@ -16,6 +16,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^15.13.1",
+    "@contentful/rich-text-types": "^15.12.1",
     "bootstrap": "4.5.0",
     "gatsby": "^4.21.1",
     "gatsby-plugin-google-analytics": "^4.21.0",

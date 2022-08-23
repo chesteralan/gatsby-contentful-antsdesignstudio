@@ -1,26 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Logo from './Logo';
+import Nav from './Nav';
 
-type Props = {}
+
+type Props = {
+  hasTopBar: boolean;
+}
 
 const Header = (props: Props) => {
+  const { hasTopBar = true } = props;
+	const [filled, setFilled] = useState(false);
+
+	const ScrollEvent = () => {
+		if (window.scrollY > 50) {
+			setFilled(true);
+		  } else {
+			setFilled(false);
+		  }
+	}
+
+	useEffect(() => {
+		window.addEventListener("scroll", ScrollEvent);
+		return () => {
+			window.removeEventListener("scroll", ScrollEvent);
+		};
+	},[])
+
   return (
-    <header id="header" className="fixed-top">
+    <header id="header" className={`fixed-top ${filled ? 'header-scrolled' : ''} ${!hasTopBar ? 'no-top-bar' : ''}`}>
     <div className="container d-flex align-items-center">
 
       <h1 className="logo mr-auto d-none"><a href="#">Ants Design Studio<span>.</span></a></h1>
       
-      <a href="#" className="logo mr-auto">
-        <img src="https://2.bp.blogspot.com/-UmtxXW72VO8/Xwk8ulQDYTI/AAAAAAAAAsQ/lEerOODNqsoRR4FIYmBpSSzqjSXVgKm_QCLcBGAsYHQ/s1600/header_img.png" alt=""/></a>
+      <Logo />
 
-      <nav className="nav-menu d-none d-lg-block">
-        <ul>
-          <li className="active"><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          
-        </ul>
-      </nav>
+      <Nav />
 
     </div>
   </header>

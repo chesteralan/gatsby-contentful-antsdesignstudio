@@ -486,15 +486,12 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("https://lh3.googleusercontent.com/2trvaUHkiER-WXIXUVBA1jOBwIR1-fVqXN_8Sv7w6vXlIpZp2ONuZDkGOHeqP8X9nyikCCLLZUJN2285uY-aKvkJfAn8ewRWxS0OS0F6XUsn0Kn4LjTpFfeAmANFW0fHuOc0amw2HkdhhTt6Qi3vdbBWVKQlr3vxozhgTkVGQ02nYlz4MKxq3xyzwUTH45_4JVn0L10Wy27L4GssPnUxZS_oNEsu3Zr3XhTSkL5LukkyN2ANiIpc4auKX-R4zBekWKa4oL6Zh5zp-4moOVhSUE0EAKuRXnXC3B7bFFQFfpXrkWR2wFOR0jnzWvfTrpS3FTuodlgXaM0xvFgcs6xxSFyVd_aW96MqrioCEb9tc_DWP9lxOK339uVuLD2qqPFUtyxN6HdZTZKnOKr_FYJroVcgAgG_k9aT0Q6sFc5OQXA2hbsUygyhHx9pozbd2O0nJ8ryh8PY3GesHM0jt1Tey2wYgE5ftRyo-_u5sKWZo_Mz_3jsC6SIRgfjENdVGZJdpW3OiQHzT0xPKeuDh3mhAg-iUij62L-J2qSZhOoXRpz9zBOQF8ygWh9OSb4Mfwo-LF1DcJasrUnE7JRgh0duSUoBH55NuP1G9nF2IsvRWkOkrzyaDpn5EVMgmGv_xusD43ecAoWADmdBIMoAVG_A-MNxvB0L58Rj15p-6jZ4xDHvOgKDdoZj-HcTvWOXHcwK3JkE=w2000-h1564-ft") top left;
   background-size: cover;
   position: relative;
 }
 
 #hero-models {
   position: absolute;
-  background-image: url("https://trello-attachments.s3.amazonaws.com/5f0e809dcb99162067e8fefb/513x883/c96e54a8671d06ae1703e4867eb99b00/hiro_1.png");
-  background-repeat: no-repeat;
   bottom: -50px;
   right: 100px;
   height: 520px;
@@ -548,7 +545,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 
-#hero h1 span {
+#hero h1 span,
+#hero h1 b {
   color: #106eea;
 }
 

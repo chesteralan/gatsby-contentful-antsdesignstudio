@@ -1,0 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#header.no-top-bar {
+    top: 0!important;
+}
