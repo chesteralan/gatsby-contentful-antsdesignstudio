@@ -982,15 +982,13 @@ section {
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
+  width: 100%;
 }
 
 .services .icon-box .icon {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #f1f6fe;
-  border-radius: 4px;
-  border: 1px solid #deebfd;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1038,7 +1036,7 @@ section {
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials {
-  padding: 80px 0;
+  padding: 140px 0 40px 0;
   background: url("https://1.bp.blogspot.com/-D9a3efwMh3o/XwgpS-D4ULI/AAAAAAAAAoI/OnXPrSLZYOQpHIiSAb4y8IlNNCbKD8E3gCLcBGAsYHQ/s1600/testimonials-bg.jpg") no-repeat;
   background-position: center center;
   background-size: cover;

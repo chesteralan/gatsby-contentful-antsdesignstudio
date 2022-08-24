@@ -5,3 +5,7 @@ html {
 #header.no-top-bar {
     top: 0!important;
 }
+
+.testimonials-carousel .carousel {
+    padding-bottom: 30px;
+}

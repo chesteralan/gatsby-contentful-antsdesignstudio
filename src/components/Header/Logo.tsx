@@ -9,7 +9,7 @@ const Logo = (props: Props) => {
     {
         headerLogo: contentfulSettings(key: {eq: "HEADER_LOGO"}) {
           imageValue {
-            gatsbyImageData(height: 80, placeholder: BLURRED)
+            gatsbyImageData(height: 80, placeholder: TRACED_SVG)
           }
         }
     }

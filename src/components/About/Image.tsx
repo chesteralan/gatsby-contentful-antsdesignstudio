@@ -10,7 +10,7 @@ const Image = (props: Props) => {
     {
         heroModel: contentfulSettings(key: {eq: "ABOUT_IMAGE"}) {
           imageValue {
-            gatsbyImageData(width: 540, placeholder: BLURRED, formats: WEBP)
+            gatsbyImageData(width: 540, placeholder: TRACED_SVG, formats: WEBP)
           }
         }
     }
