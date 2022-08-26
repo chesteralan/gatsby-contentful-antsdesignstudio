@@ -15,7 +15,7 @@ const PortfolioItem = ({ item }: Props) => {
       {imageData && <GatsbyImage image={imageData} alt={title} />}
       <div className="portfolio-info">
         <h4>{title}</h4>
-        <p>{category.name}</p>
+        <p>{category?.name}</p>
       </div>
     </div>
   );
