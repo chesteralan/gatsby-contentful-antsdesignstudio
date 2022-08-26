@@ -18,15 +18,17 @@ const Video = (props: Props) => {
 
   return (
     <>
-      <a
-        onClick={() => setActive(true)}
-        href="#"
-        className="btn-watch-video"
-        data-vbtype="video"
-        data-autoplay="true"
-      >
-        Watch Video <i className="icofont-play-alt-2"></i>
-      </a>
+      {youtubeId && (
+        <a
+          onClick={() => setActive(true)}
+          href="#"
+          className="btn-watch-video"
+          data-vbtype="video"
+          data-autoplay="true"
+        >
+          Watch Video <i className="icofont-play-alt-2"></i>
+        </a>
+      )}
       {active && <VideoModal close={setActive} youtubeId={youtubeId} />}
     </>
   );
