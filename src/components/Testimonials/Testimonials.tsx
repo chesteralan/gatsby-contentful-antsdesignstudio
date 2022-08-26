@@ -63,7 +63,7 @@ const Testimonials = (props: Props) => {
             selectedItem={0}
             showArrows={false}
             showIndicators={true}
-            showThumbs={true}
+            showThumbs={false}
             ariaLabel={""}
             axis={"horizontal"}
             transitionTime={500}

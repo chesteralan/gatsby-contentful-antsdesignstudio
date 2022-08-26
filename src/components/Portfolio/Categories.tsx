@@ -18,7 +18,7 @@ const Categories = ({ filterByCategory }: Props) => {
       }
     }
   `);
-  console.log(data);
+
   const [currentCategory, setCurrentCategory] = filterByCategory;
   const categories = data.categories.nodes;
   const filteredCategories = categories.filter((c: any) => c.portfolio);
