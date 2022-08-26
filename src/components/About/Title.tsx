@@ -1,23 +1,20 @@
-import React from 'react'
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-type Props = {}
+type Props = {};
 
 const Title = (props: Props) => {
-
   const data = useStaticQuery(graphql`
     {
-        title: contentfulSettings(key: {eq: "ABOUT_TITLE"}) {
-          textValue
-        }
+      title: contentfulSettings(key: { eq: "ABOUT_TITLE" }) {
+        textValue
+      }
     }
-    `)
+  `);
 
-    const title = data.title.textValue
+  const title = data.title.textValue;
 
-  return (
-    <h3>{title}</h3>
-  )
-}
+  return <h3>{title}</h3>;
+};
 
-export default Title
+export default Title;

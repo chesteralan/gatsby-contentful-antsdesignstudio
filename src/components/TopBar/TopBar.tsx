@@ -1,41 +1,44 @@
-import React, { useEffect, useState } from 'react'
-import Email from './Email';
-import Phone from './Phone';
-import Socials from './Socials';
+import React, { useEffect, useState } from "react";
+import Email from "./Email";
+import Phone from "./Phone";
+import Socials from "./Socials";
 
-type Props = {}
+type Props = {};
 
 const TopBar = (props: Props) => {
+  const [filled, setFilled] = useState(false);
 
-	const [filled, setFilled] = useState(false);
+  const ScrollEvent = () => {
+    if (window.scrollY > 50) {
+      setFilled(true);
+    } else {
+      setFilled(false);
+    }
+  };
 
-	const ScrollEvent = () => {
-		if (window.scrollY > 50) {
-			setFilled(true);
-		  } else {
-			setFilled(false);
-		  }
-	}
-
-	useEffect(() => {
-		window.addEventListener("scroll", ScrollEvent);
-		return () => {
-			window.removeEventListener("scroll", ScrollEvent);
-		};
-	},[])
+  useEffect(() => {
+    window.addEventListener("scroll", ScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", ScrollEvent);
+    };
+  }, []);
 
   return (
-    <div id="topbar" className={`d-none d-lg-flex align-items-center fixed-top ${filled ? 'topbar-scrolled' : ''}`}>
-    <div className="container d-flex">
-
-      <div className="contact-info mr-auto">
-        <Email />
-        <Phone />
+    <div
+      id="topbar"
+      className={`d-none d-lg-flex align-items-center fixed-top ${
+        filled ? "topbar-scrolled" : ""
+      }`}
+    >
+      <div className="container d-flex">
+        <div className="contact-info mr-auto">
+          <Email />
+          <Phone />
+        </div>
+        <Socials />
       </div>
-      <Socials />
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default TopBar
+export default TopBar;

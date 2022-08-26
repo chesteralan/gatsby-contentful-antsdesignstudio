@@ -1,11 +1,11 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 #header.no-top-bar {
-    top: 0!important;
+  top: 0 !important;
 }
 
 .testimonials-carousel .carousel {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }

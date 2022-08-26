@@ -2,9 +2,9 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import TestimonialItem from "./TestimonialItem";
 import type { IGatsbyImageData } from "gatsby-plugin-image";
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from "react-responsive-carousel";
 
-import 'react-responsive-carousel/lib/styles/carousel.css';
+import "react-responsive-carousel/lib/styles/carousel.css";
 
 type Props = {};
 
@@ -37,8 +37,7 @@ const Testimonials = (props: Props) => {
     <section id="testimonials" className="testimonials">
       <div className="container" data-aos="zoom-in">
         <div className="testimonials-carousel">
-
-        <Carousel
+          <Carousel
             showStatus={false}
             swipeScrollTolerance={5}
             autoPlay={false}
@@ -55,15 +54,16 @@ const Testimonials = (props: Props) => {
             showArrows={false}
             showIndicators={true}
             showThumbs={true}
-            ariaLabel={''}
-            axis={'horizontal'}
+            ariaLabel={""}
+            axis={"horizontal"}
             transitionTime={500}
-            >
-
-          {testimonials.map((testimonial: Testimonial, index: number) => (
-            <TestimonialItem key={index.toString()} testimonial={testimonial} />
-          ))}
-
+          >
+            {testimonials.map((testimonial: Testimonial, index: number) => (
+              <TestimonialItem
+                key={index.toString()}
+                testimonial={testimonial}
+              />
+            ))}
           </Carousel>
         </div>
       </div>

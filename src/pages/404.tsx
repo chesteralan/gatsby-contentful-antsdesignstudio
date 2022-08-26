@@ -1,13 +1,11 @@
-import * as React from "react"
-import { HeadFC } from "gatsby"
-import IndexPage from "./index"
+import * as React from "react";
+import { HeadFC } from "gatsby";
+import IndexPage from "./index";
 
 const NotFoundPage = () => {
-  return (
-   <IndexPage />
-  )
-}
+  return <IndexPage />;
+};
 
-export default NotFoundPage
+export default NotFoundPage;
 
-export const Head: HeadFC = () => <title>Not found</title>
+export const Head: HeadFC = () => <title>Not found</title>;

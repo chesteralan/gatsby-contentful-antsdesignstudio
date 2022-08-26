@@ -1,6 +1,6 @@
 import React from "react";
 import type { Service } from "./Services";
-import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 type Props = {
   service: Service;
@@ -12,9 +12,7 @@ const ServiceItem = ({ service }: Props) => {
   const image = getImage(featuredImage) as IGatsbyImageData;
 
   return (
-    <div
-      className="col-lg-4 col-md-6 d-flex justify-content-center"
-    >
+    <div className="col-lg-4 col-md-6 d-flex justify-content-center">
       <div className="icon-box">
         <div className="icon">
           <GatsbyImage image={image} alt="service image" />

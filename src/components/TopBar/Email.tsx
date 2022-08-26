@@ -1,24 +1,25 @@
-import React from 'react'
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-type Props = {}
+type Props = {};
 
 const Email = (props: Props) => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
-        email: contentfulSettings(key: {eq: "TOPBAR_EMAIL"}) {
-          textValue
-        }
-      }      
-    `)
+      email: contentfulSettings(key: { eq: "TOPBAR_EMAIL" }) {
+        textValue
+      }
+    }
+  `);
 
-    const email = data.email.textValue;
+  const email = data.email.textValue;
 
   return (
     <>
-    <i className="icofont-envelope"></i> <a href={`mailto:${email}`}>{email}</a>
+      <i className="icofont-envelope"></i>{" "}
+      <a href={`mailto:${email}`}>{email}</a>
     </>
-  )
-}
+  );
+};
 
-export default Email
+export default Email;
