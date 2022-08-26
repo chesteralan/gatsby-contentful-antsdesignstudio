@@ -22,3 +22,7 @@ html {
   padding: inherit;
   border-radius: 100%;
 }
+
+.portfolio-item {
+  cursor: pointer;
+}

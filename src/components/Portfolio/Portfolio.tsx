@@ -9,7 +9,8 @@ export type Portfolio = {
   title: string;
   description: { description: string };
   category: { name: string };
-  image: IGatsbyImageData;
+  thumbnail: IGatsbyImageData;
+  mainImage: IGatsbyImageData;
 };
 const Portfolio = (props: Props) => {
   const data = useStaticQuery(graphql`
@@ -23,8 +24,11 @@ const Portfolio = (props: Props) => {
           category {
             name
           }
-          image {
+          thumbnail: image {
             gatsbyImageData(width: 395, placeholder: TRACED_SVG)
+          }
+          mainImage: image {
+            gatsbyImageData(width: 512, placeholder: TRACED_SVG)
           }
         }
       }
