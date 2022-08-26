@@ -12,7 +12,7 @@ const PortfolioItem = ({ item }: Props) => {
 
   return (
     <div className="col-lg-3 col-md-4 portfolio-item filter-ads filter-selected">
-      <GatsbyImage image={imageData} alt={title} />
+      {imageData && <GatsbyImage image={imageData} alt={title} />}
       <div className="portfolio-info">
         <h4>{title}</h4>
         <p>{category.name}</p>

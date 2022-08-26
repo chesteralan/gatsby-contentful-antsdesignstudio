@@ -9,3 +9,16 @@ html {
 .testimonials-carousel .carousel {
   padding-bottom: 30px;
 }
+
+.modal {
+  background: #cccccc59;
+}
+.modal-content .btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  padding: inherit;
+  border-radius: 100%;
+}

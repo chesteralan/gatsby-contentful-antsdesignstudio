@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import VideoModal from "./VideoModal";
 
 type Props = {};
 
@@ -12,18 +13,22 @@ const Video = (props: Props) => {
     }
   `);
 
+  const [active, setActive] = useState(false);
   const youtubeId = data.youtubeId.textValue;
 
   return (
-    <a
-      href={`https://www.youtube.com/watch?v=${youtubeId}`}
-      className="venobox btn-watch-video"
-      data-vbtype="video"
-      data-autoplay="true"
-    >
-      {" "}
-      Watch Video <i className="icofont-play-alt-2"></i>
-    </a>
+    <>
+      <a
+        onClick={() => setActive(true)}
+        href="#"
+        className="btn-watch-video"
+        data-vbtype="video"
+        data-autoplay="true"
+      >
+        Watch Video <i className="icofont-play-alt-2"></i>
+      </a>
+      {active && <VideoModal close={setActive} youtubeId={youtubeId} />}
+    </>
   );
 };
 
