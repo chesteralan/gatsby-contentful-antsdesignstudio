@@ -20,7 +20,7 @@ const Hero = (props: Props) => {
     }
   `);
 
-  const bgUrl = data.bg.imageValue.url;
+  const bgUrl = data.bg?.imageValue?.url;
 
   return (
     <section

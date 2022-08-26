@@ -28,13 +28,23 @@ const Testimonials = (props: Props) => {
           }
         }
       }
+      bg: contentfulSettings(key: { eq: "TESTIMONIALS_BACKGROUND_IMAGE" }) {
+        imageValue {
+          url
+        }
+      }
     }
   `);
 
   const testimonials = data.testimonials.nodes;
+  const bgUrl = data.bg?.imageValue?.url;
 
   return (
-    <section id="testimonials" className="testimonials">
+    <section
+      id="testimonials"
+      className="testimonials"
+      style={{ backgroundImage: `url(${bgUrl})` }}
+    >
       <div className="container" data-aos="zoom-in">
         <div className="testimonials-carousel">
           <Carousel

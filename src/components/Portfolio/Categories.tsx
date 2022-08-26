@@ -1,9 +1,11 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-type Props = {};
+type Props = {
+  filterByCategory: any[];
+};
 
-const Categories = (props: Props) => {
+const Categories = ({ filterByCategory }: Props) => {
   const data = useStaticQuery(graphql`
     {
       categories: allContentfulPortfolioCategory {
@@ -16,7 +18,8 @@ const Categories = (props: Props) => {
       }
     }
   `);
-
+  console.log(data);
+  const [currentCategory, setCurrentCategory] = filterByCategory;
   const categories = data.categories.nodes;
   const filteredCategories = categories.filter((c: any) => c.portfolio);
 
@@ -24,9 +27,15 @@ const Categories = (props: Props) => {
     <div className="row" data-aos="fade-up" data-aos-delay="100">
       <div className="col-lg-12 d-flex justify-content-center">
         <ul id="portfolio-flters">
-          <li>All</li>
-          {filteredCategories.map((c: any) => (
-            <li>{c.name}</li>
+          <li onClick={() => setCurrentCategory(null)}>All</li>
+          {filteredCategories.map((c: any, index: number) => (
+            <li
+              key={index.toString()}
+              onClick={() => setCurrentCategory(c.name)}
+              className={currentCategory === c.name ? `filter-active` : ``}
+            >
+              {c.name}
+            </li>
           ))}
         </ul>
       </div>

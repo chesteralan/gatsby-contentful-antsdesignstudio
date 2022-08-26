@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Categories from "./Categories";
 import PortfolioItem from "./PortfolioItem";
 import { useStaticQuery, graphql } from "gatsby";
@@ -31,7 +31,15 @@ const Portfolio = (props: Props) => {
     }
   `);
 
-  const portfolio = data.portfolio.nodes;
+  const [currentCategory, setCurrentCategory] = useState(null);
+
+  const handleFilterCategory = (portfolio: Portfolio) => {
+    if (currentCategory === null) return true;
+    if (currentCategory === "") return true;
+    return currentCategory === portfolio.category.name;
+  };
+
+  const portfolio = data.portfolio.nodes.filter(handleFilterCategory);
 
   return (
     <section id="portfolio" className="portfolio">
@@ -44,7 +52,7 @@ const Portfolio = (props: Props) => {
           <p></p>
         </div>
 
-        <Categories />
+        <Categories filterByCategory={[currentCategory, setCurrentCategory]} />
 
         <div
           className="row portfolio-container"

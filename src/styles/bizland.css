@@ -1053,8 +1053,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 140px 0 40px 0;
-  background: url("https://1.bp.blogspot.com/-D9a3efwMh3o/XwgpS-D4ULI/AAAAAAAAAoI/OnXPrSLZYOQpHIiSAb4y8IlNNCbKD8E3gCLcBGAsYHQ/s1600/testimonials-bg.jpg")
-    no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;

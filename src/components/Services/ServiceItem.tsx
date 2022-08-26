@@ -12,7 +12,7 @@ const ServiceItem = ({ service }: Props) => {
   const image = getImage(featuredImage) as IGatsbyImageData;
 
   return (
-    <div className="col-lg-4 col-md-6 d-flex justify-content-center">
+    <div className="col-lg-4 col-md-6 d-flex justify-content-center mb-5">
       <div className="icon-box">
         <div className="icon">
           <GatsbyImage image={image} alt="service image" />
