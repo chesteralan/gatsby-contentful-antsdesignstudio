@@ -26,3 +26,9 @@ html {
 .portfolio-item {
   cursor: pointer;
 }
+
+@media (max-width: 425px) {
+  .logo.mr-auto {
+    margin: 0 auto !important;
+  }
+}

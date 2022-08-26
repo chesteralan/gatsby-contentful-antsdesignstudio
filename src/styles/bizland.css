@@ -523,7 +523,7 @@ h6 {
     height: 420px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   #hero-models {
     display: none;
   }

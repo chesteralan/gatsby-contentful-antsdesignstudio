@@ -18,7 +18,7 @@ const Logo = (props: Props) => {
   const image = getImage(data.headerLogo.imageValue) as IGatsbyImageData;
 
   return (
-    <a className="logo mx-auto">
+    <a className="logo mr-auto">
       <GatsbyImage image={image} alt="header logo" />
     </a>
   );

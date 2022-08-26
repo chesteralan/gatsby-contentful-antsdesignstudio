@@ -5,7 +5,7 @@ type Props = {};
 
 const Nav = (props: Props) => {
   return (
-    <nav className="nav-menu d-none d-lg-block">
+    <nav className="nav-menu d-none d-sm-block">
       <ul>
         <NavLink id="hero">Home</NavLink>
         <NavLink id="about">About</NavLink>
