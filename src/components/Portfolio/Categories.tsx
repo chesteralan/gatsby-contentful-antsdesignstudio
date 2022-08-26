@@ -24,7 +24,7 @@ const Categories = ({ filterByCategory }: Props) => {
   const filteredCategories = categories.filter((c: any) => c.portfolio);
 
   return (
-    <div className="row" data-aos="fade-up" data-aos-delay="100">
+    <div className="row">
       <div className="col-lg-12 d-flex justify-content-center">
         <ul id="portfolio-flters">
           <li onClick={() => setCurrentCategory(null)}>All</li>

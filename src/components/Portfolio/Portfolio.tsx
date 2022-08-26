@@ -24,7 +24,7 @@ const Portfolio = (props: Props) => {
             name
           }
           image {
-            gatsbyImageData(width: 255, placeholder: TRACED_SVG)
+            gatsbyImageData(width: 395, placeholder: TRACED_SVG)
           }
         }
       }
@@ -36,7 +36,7 @@ const Portfolio = (props: Props) => {
   const handleFilterCategory = (portfolio: Portfolio) => {
     if (currentCategory === null) return true;
     if (currentCategory === "") return true;
-    return currentCategory === portfolio.category.name;
+    return currentCategory === portfolio.category?.name;
   };
 
   const portfolio = data.portfolio.nodes.filter(handleFilterCategory);
