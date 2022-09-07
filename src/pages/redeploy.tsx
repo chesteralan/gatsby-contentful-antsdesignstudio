@@ -12,9 +12,11 @@ const Redeploy = (props: Props) => {
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     if (evt.target.value === process.env.GATSBY_REDEPLOY_PASSWORD) {
-      axios.post("/api/_____redeploy", {}).then(function () {
-        setDeployed(true);
-      });
+      axios
+        .post("/api/_____redeploy", { password: evt.target.value })
+        .then(function () {
+          setDeployed(true);
+        });
     }
   };
 
