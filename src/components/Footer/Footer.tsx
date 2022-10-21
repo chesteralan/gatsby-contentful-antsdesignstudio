@@ -16,8 +16,20 @@ const Footer = (props: Props) => {
         </div>
         <div className="credits">
           Designed by{" "}
-          <a target="_blank" href="https://bootstrapmade.com/">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://bootstrapmade.com/"
+          >
             BootstrapMade
+          </a>{" "}
+          &middot; Developed by{" "}
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.chesteralan.com/"
+          >
+            Alchie
           </a>
         </div>
       </div>

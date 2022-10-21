@@ -14,6 +14,7 @@ const Categories = ({ filterByCategory }: Props) => {
           portfolio {
             id
           }
+          priority
         }
       }
     }
@@ -21,7 +22,10 @@ const Categories = ({ filterByCategory }: Props) => {
 
   const [currentCategory, setCurrentCategory] = filterByCategory;
   const categories = data.categories.nodes;
-  const filteredCategories = categories.filter((c: any) => c.portfolio);
+  console.log(categories);
+  const filteredCategories = categories
+    .filter((c: any) => c.portfolio)
+    .sort((a: any, b: any) => b.priority - a.priority);
 
   return (
     <div className="row">

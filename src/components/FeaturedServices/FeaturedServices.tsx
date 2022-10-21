@@ -25,12 +25,15 @@ const FeaturedServices = (props: Props) => {
             longDescription
           }
           name
+          priority
         }
       }
     }
   `);
 
-  const featuredServices = data.featuredServices.nodes;
+  const featuredServices = data.featuredServices.nodes.sort(
+    (a: any, b: any) => b.priority - a.priority
+  );
 
   return (
     <section id="featured-services" className="featured-services">

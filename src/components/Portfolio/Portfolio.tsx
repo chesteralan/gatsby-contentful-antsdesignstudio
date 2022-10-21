@@ -30,6 +30,7 @@ const Portfolio = (props: Props) => {
           mainImage: image {
             gatsbyImageData(width: 512, placeholder: TRACED_SVG)
           }
+          priority
         }
       }
     }
@@ -43,7 +44,9 @@ const Portfolio = (props: Props) => {
     return currentCategory === portfolio.category?.name;
   };
 
-  const portfolio = data.portfolio.nodes.filter(handleFilterCategory);
+  const portfolio = data.portfolio.nodes
+    .filter(handleFilterCategory)
+    .sort((a: any, b: any) => b.priority - a.priority);
 
   return (
     <section id="portfolio" className="portfolio">

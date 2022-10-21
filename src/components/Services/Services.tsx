@@ -21,12 +21,15 @@ const Services = (props: Props) => {
           featuredImage {
             gatsbyImageData(width: 64, placeholder: TRACED_SVG)
           }
+          priority
         }
       }
     }
   `);
 
-  const allServices = data.allServices.nodes;
+  const allServices = data.allServices.nodes.sort(
+    (a: any, b: any) => b.priority - a.priority
+  );
 
   return (
     <section id="services" className="services">

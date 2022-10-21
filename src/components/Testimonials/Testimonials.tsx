@@ -26,6 +26,7 @@ const Testimonials = (props: Props) => {
           image {
             gatsbyImageData(width: 100, placeholder: TRACED_SVG)
           }
+          priority
         }
       }
       bg: contentfulSettings(key: { eq: "TESTIMONIALS_BACKGROUND_IMAGE" }) {
@@ -36,7 +37,9 @@ const Testimonials = (props: Props) => {
     }
   `);
 
-  const testimonials = data.testimonials.nodes;
+  const testimonials = data.testimonials.nodes.sort(
+    (a: any, b: any) => b.priority - a.priority
+  );
   const bgUrl = data.bg?.imageValue?.url;
 
   return (
