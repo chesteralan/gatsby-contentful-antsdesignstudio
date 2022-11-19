@@ -12,9 +12,9 @@ const SubTitle = (props: Props) => {
     }
   `);
 
-  const subTitle = data.subTitle.textValue;
+  const subTitle = data?.subTitle?.textValue || false;
 
-  return <h2>{subTitle}</h2>;
+  return <>{subTitle && <h2>{subTitle}</h2>}</>;
 };
 
 export default SubTitle;

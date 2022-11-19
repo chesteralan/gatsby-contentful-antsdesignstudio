@@ -11,6 +11,7 @@ export type Portfolio = {
   category: { name: string };
   thumbnail: IGatsbyImageData;
   mainImage: IGatsbyImageData;
+  featured: boolean;
 };
 const Portfolio = (props: Props) => {
   const data = useStaticQuery(graphql`
@@ -31,6 +32,7 @@ const Portfolio = (props: Props) => {
             gatsbyImageData(width: 512, placeholder: TRACED_SVG)
           }
           priority
+          featured
         }
       }
     }
@@ -39,8 +41,8 @@ const Portfolio = (props: Props) => {
   const [currentCategory, setCurrentCategory] = useState(null);
 
   const handleFilterCategory = (portfolio: Portfolio) => {
-    if (currentCategory === null) return true;
-    if (currentCategory === "") return true;
+    if (currentCategory === null) return portfolio.featured;
+    if (currentCategory === "") return portfolio.featured;
     return currentCategory === portfolio.category?.name;
   };
 

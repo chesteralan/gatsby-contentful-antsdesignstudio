@@ -14,7 +14,7 @@ const Video = (props: Props) => {
   `);
 
   const [active, setActive] = useState(false);
-  const youtubeId = data.youtubeId.textValue;
+  const youtubeId = data?.youtubeId?.textValue || false;
 
   return (
     <>

@@ -29,7 +29,7 @@ const Hero = (props: Props) => {
       style={{ backgroundImage: `url(${bgUrl})` }}
     >
       <div className="container" data-aos="zoom-out" data-aos-delay="100">
-        <div className="col-md-8">
+        <div className="col-md-12">
           <Title />
           <SubTitle />
           <div className="d-flex">
